@@ -12,6 +12,7 @@ public class App extends Jooby {
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     {
+        assets("/", "index.html"); 
         use(new LiveReload());
 
         get("/", req -> {
